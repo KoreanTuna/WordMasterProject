@@ -6,11 +6,11 @@
 
 ## 2. 단어추가 
 
-#1번 단어 추가
+# 1번 단어 추가
 
 <img src = "https://github.com/KoreanTuna/WordMasterProject/blob/main/screenshot/project_addWord_1.png?raw=true" width:360px>
 
-#2번 단어 추가
+# 2번 단어 추가
 
 <img src = "https://github.com/KoreanTuna/WordMasterProject/blob/main/screenshot/project_addWord_2.png?raw=true" width:360px>
 
