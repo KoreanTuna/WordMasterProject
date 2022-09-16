@@ -23,8 +23,8 @@ public class WordManager {
                 + "********************\n"
                 + "=> 원하는 메뉴는? ");
         return s.nextInt();
-
     }
+
     public void start() {
         while(true) {
             int menu = selectMenu();
@@ -40,8 +40,12 @@ public class WordManager {
                 //list
                 wordCRUD.listAll();
             }
+            else if(menu == 5){
+                wordCRUD.update();
+            }
+            else if(menu == 6){
+                wordCRUD.delete();
+            }
         }
-
     }
-
 }
