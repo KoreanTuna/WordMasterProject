@@ -24,6 +24,12 @@ public class WordManager {
                 + "=> 원하는 메뉴는? ");
         return s.nextInt();
     }
+    public void saveFile(){
+
+    }
+    public void loadFile(){
+
+    }
 
     public void start() {
         while(true) {
@@ -45,6 +51,9 @@ public class WordManager {
             }
             else if(menu == 6){
                 wordCRUD.delete();
+            }
+            else if(menu == 7){
+                saveFile();
             }
         }
     }

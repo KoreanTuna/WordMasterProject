@@ -46,29 +46,56 @@ public class WordCRUD implements ICRUD{
         s.nextLine();
         System.out.print("수정하고 싶은 단어를 입력하세요 : ");
         String searchWord = s.nextLine();
-
         System.out.println("\n---------------------------");
-        for(int i = 0; i< list.size(); i++) {
-            if(list.get(i).getWord().contains(searchWord.trim())){
-                searchList.add(list.get(i));
-                System.out.print((i+1) + " ");
-                System.out.println(list.get(i).toString());
-            }
-        }
+        searchWord(searchWord);
         System.out.print("수정할 번호를 선택하세요 : ");
         int searchIndex = s.nextInt(); s.nextLine();
         System.out.print("새로운 뜻을 입력하세요 : ");
         String newMeanning = s.nextLine();
         for(int i = 0; i< list.size(); i++) {
-            if(list.get(i).getWord().contains(searchList.get(searchIndex-1).getWord())){
+            if(list.get(i).getWord().contains(searchList.get(searchIndex-1).getWord()) && list.get(i).getMeaning().contains(searchList.get(searchIndex-1).getMeaning())){
                 list.get(i).setMeaning(newMeanning);
             }
         }
         System.out.println("단어 수정이 완료되었습니다.");
     }
 
+    public void searchWord(String searchWord) {
+        int j= 1;
+        for(int i = 0; i< list.size(); i++) {
+            if(list.get(i).getWord().contains(searchWord.trim())){
+                searchList.add(list.get(i));
+                System.out.print((j++) + " ");
+                System.out.println(list.get(i).toString());
+            }
+        }
+        System.out.println("---------------------------");
+    }
+
     @Override
     public void delete() {
+        searchList.clear();
+        s.nextLine();
+        System.out.print("삭제할 단어를 검색해주세요 : ");
+        String deleteWord = s.nextLine();
+        System.out.println("---------------------------");
+        searchWord(deleteWord);
+        System.out.print("삭제할 번호를 선택하세요 : ");
+        int searchIndex = s.nextInt(); s.nextLine();
+        System.out.print("정말로 삭제하실래요?(Y/n) : ");
+        String confirm = s.nextLine();
+        if(confirm.trim().equals("Y") || confirm.trim().equals("y")){
+            for(int i = 0; i< list.size(); i++) {
+                if(list.get(i).getWord().contains(searchList.get(searchIndex-1).getWord()) && list.get(i).getMeaning().contains(searchList.get(searchIndex-1).getMeaning())) {
+                    list.remove(i);
+                }
+            }
+            System.out.println("단어가 삭제되었습니다.");
+        }
+        else{
+            System.out.println("단어 삭제가 취소되었습니다.");
+        }
+
     }
 
     @Override
