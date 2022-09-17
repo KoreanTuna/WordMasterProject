@@ -20,7 +20,7 @@
 
 ## 4. 단어 검색
 
-<img src = "project_searchWord.png" width:360px>
+<img src = "https://github.com/KoreanTuna/WordMasterProject/blob/main/screenshot/project_searchWord.png?raw=true" width:360px>
 
 ## 0. 프로그램 종료
 
