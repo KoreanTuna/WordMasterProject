@@ -32,7 +32,7 @@
 
 ## 7. 단어 삭제
 
-<img src = "https://github.com/KoreanTuna/WordMasterProject/blob/main/screenshot/project_deleteWord.png?raw=true" width: 360px>
+<img src = "https://github.com/KoreanTuna/WordMasterProject/blob/main/screenshot/project_deleteWord.png?raw=true" width:360px>
 
 ## 8. 파일 저장
 
