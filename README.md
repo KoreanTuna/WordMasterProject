@@ -36,7 +36,6 @@
 
 ## 8. 파일 저장
 
-<img src = "https://github.com/KoreanTuna/WordMasterProject/blob/main/screenshot/project_saveFile_2.png?raw=true" width :240px>
 <img src = "https://github.com/KoreanTuna/WordMasterProject/blob/main/screenshot/project_saveFile_1.png?raw=true" width:240px>
 <img src = "https://github.com/KoreanTuna/WordMasterProject/blob/main/screenshot/project_dictinary_file.png?raw=true" width:240px>
 
