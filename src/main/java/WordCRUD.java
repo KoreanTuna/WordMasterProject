@@ -1,3 +1,6 @@
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -5,6 +8,7 @@ public class WordCRUD implements ICRUD{
     ArrayList<Word> list;
     ArrayList<Word> searchList;
     Scanner s;
+    String fileName ="Dictionary.txt";
 
     WordCRUD(Scanner s){
         list = new ArrayList<>();
@@ -38,6 +42,33 @@ public class WordCRUD implements ICRUD{
         }
         System.out.println("---------------------------");
 
+    }
+
+    public void listAll(int level) {
+        int j= 0;
+        System.out.println("---------------------------");
+        for(int i = 0; i< list.size(); i++) {
+            if(list.get(i).getLevel() == level){
+                System.out.print((j+1) + " ");
+                System.out.println(list.get(i).toString());
+                j++;
+            }
+
+        }
+        System.out.println("---------------------------");
+    }
+    public void listAll(String name) {
+        int j= 0;
+        System.out.println("---------------------------");
+        for(int i = 0; i< list.size(); i++) {
+            if(list.get(i).getWord().contains(name)){
+                System.out.print((j+1) + " ");
+                System.out.println(list.get(i).toString());
+                j++;
+            }
+
+        }
+        System.out.println("---------------------------");
     }
 
     @Override
@@ -97,11 +128,36 @@ public class WordCRUD implements ICRUD{
         }
 
     }
-
+    public void saveFile(){
+        try {
+            PrintWriter printWriter = new PrintWriter(new FileWriter(fileName));
+            for(Word one : list){
+                printWriter.write(one.toFileString()+ "\n");
+            }
+            printWriter.close();
+            System.out.print("단어장이 저장되었습니다.\n");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
     @Override
     public void select(int id) {
         // TODO Auto-generated method stub
 
     }
 
+    public void levelWordSearch() {
+        System.out.print("찾고 싶은 레벨을 입력하세요 : ");
+        int level = s.nextInt();
+        listAll(level);
+    }
+
+    public void wordSearch() {
+        s.nextLine();
+        String name;
+        System.out.print("검색할 단어를 입력해주세요 : ");
+        name = s.nextLine();
+        listAll(name);
+
+    }
 }

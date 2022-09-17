@@ -1,4 +1,3 @@
-import javax.annotation.processing.Filer;
 import java.io.*;
 import java.util.StringTokenizer;
 
@@ -9,16 +8,13 @@ public class FileBufferedReader {
     FileBufferedReader(WordCRUD wordCRUD){
         this.wordCRUD = wordCRUD;
     };
+    String fileName = "Dictionary.txt";
     public void loadFile(){
         {
             try {
-                String path = System.getProperty("user.dir") + "\\src\\main\\java\\";
-                String path2 = "/Users/songmin-u/eclipse-workspace/WordMasterProject/src/main/java";
-//                File fin = new File(path+"Dictionary.txt");
-                File fin = new File(path2+"Dictionary.txt");
 
 
-                br = new BufferedReader(new FileReader(fin));
+                br = new BufferedReader(new FileReader(fileName));
                 String oneline;
                 int number = 0;
                 while((oneline = br.readLine()) != null){

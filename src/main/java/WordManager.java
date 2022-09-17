@@ -5,10 +5,14 @@ public class WordManager {
 
     Scanner s = new Scanner(System.in);
     WordCRUD wordCRUD;
+    FileBufferedReader bufferedReader;
+
     WordManager(){
         wordCRUD = new WordCRUD(s);
+        bufferedReader = new FileBufferedReader(wordCRUD);
+
     }
-    FileBufferedReader bufferedReader = new FileBufferedReader(wordCRUD);
+
     public int selectMenu() {
         System.out.print("*** 영단어 마스터 ***n"
                 + "********************\n"
@@ -24,9 +28,7 @@ public class WordManager {
                 + "=> 원하는 메뉴는? ");
         return s.nextInt();
     }
-    public void saveFile(){
 
-    }
 
 
     public void start() {
@@ -52,7 +54,13 @@ public class WordManager {
                 wordCRUD.delete();
             }
             else if(menu == 7){
-                saveFile();
+                wordCRUD.saveFile();
+            }
+            else if(menu== 2){
+                wordCRUD.levelWordSearch();
+            }
+            else if(menu == 3){
+                wordCRUD.wordSearch();
             }
         }
     }
