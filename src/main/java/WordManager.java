@@ -5,8 +5,12 @@ public class WordManager {
 
     Scanner s = new Scanner(System.in);
     WordCRUD wordCRUD;
+    FileBufferedReader bufferedReader;
+
     WordManager(){
         wordCRUD = new WordCRUD(s);
+        bufferedReader = new FileBufferedReader(wordCRUD);
+
     }
 
     public int selectMenu() {
@@ -23,9 +27,12 @@ public class WordManager {
                 + "********************\n"
                 + "=> 원하는 메뉴는? ");
         return s.nextInt();
-
     }
+
+
+
     public void start() {
+        bufferedReader.loadFile();
         while(true) {
             int menu = selectMenu();
             if(menu == 0) {
@@ -40,8 +47,21 @@ public class WordManager {
                 //list
                 wordCRUD.listAll();
             }
+            else if(menu == 5){
+                wordCRUD.update();
+            }
+            else if(menu == 6){
+                wordCRUD.delete();
+            }
+            else if(menu == 7){
+                wordCRUD.saveFile();
+            }
+            else if(menu== 2){
+                wordCRUD.levelWordSearch();
+            }
+            else if(menu == 3){
+                wordCRUD.wordSearch();
+            }
         }
-
     }
-
 }
