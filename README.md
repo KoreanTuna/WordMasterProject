@@ -16,7 +16,7 @@
 
 ## 3. 추가된 단어리스트 확인
 
-<img src = "https://github.com/KoreanTuna/WordMasterProject/blob/main/screenshot/project_checkwordList.png?raw=true" width : 360px>
+<img src = "https://github.com/KoreanTuna/WordMasterProject/blob/main/screenshot/project_checkwordList.png?raw=true" width:360px>
 
 ## 4. 레벨 기준 단어 검색
 
@@ -37,6 +37,7 @@
 ## 8. 파일 저장
 
 <img src = "https://github.com/KoreanTuna/WordMasterProject/blob/main/screenshot/project_saveFile_1.png?raw=true" width:240px>
+<img src = "https://github.com/KoreanTuna/WordMasterProject/blob/main/screenshot/project_saveFile_2.png?raw=true", width:240px>
 <img src = "https://github.com/KoreanTuna/WordMasterProject/blob/main/screenshot/project_dictinary_file.png?raw=true" width:240px>
 
 ## 0. 프로그램 종료
