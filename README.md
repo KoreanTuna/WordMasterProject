@@ -16,8 +16,12 @@
 
 ## 3. 추가된 단어리스트 확인
 
-<img src = "https://github.com/KoreanTuna/WordMasterProject/blob/main/screenshot/project_checkwordList.png?raw=true">
+<img src = "https://github.com/KoreanTuna/WordMasterProject/blob/main/screenshot/project_checkwordList.png?raw=true" width : 360px>
 
-## 4. 프로그램 정료
+## 4. 단어 검색
+
+<img src = "project_searchWord.png" width:360px>
+
+## 0. 프로그램 종료
 
 <img src = "https://github.com/KoreanTuna/WordMasterProject/blob/main/screenshot/project_end.png?raw=true">
