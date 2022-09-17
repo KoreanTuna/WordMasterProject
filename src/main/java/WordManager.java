@@ -8,7 +8,7 @@ public class WordManager {
     WordManager(){
         wordCRUD = new WordCRUD(s);
     }
-
+    FileBufferedReader bufferedReader = new FileBufferedReader(wordCRUD);
     public int selectMenu() {
         System.out.print("*** 영단어 마스터 ***n"
                 + "********************\n"
@@ -27,11 +27,10 @@ public class WordManager {
     public void saveFile(){
 
     }
-    public void loadFile(){
 
-    }
 
     public void start() {
+        bufferedReader.loadFile();
         while(true) {
             int menu = selectMenu();
             if(menu == 0) {
