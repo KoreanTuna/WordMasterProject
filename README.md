@@ -18,13 +18,27 @@
 
 <img src = "https://github.com/KoreanTuna/WordMasterProject/blob/main/screenshot/project_checkwordList.png?raw=true" width : 360px>
 
-## 4. 레빌 기준 단어 검색
+## 4. 레벨 기준 단어 검색
 
 <img src = "https://github.com/KoreanTuna/WordMasterProject/blob/main/screenshot/project_levelSearchWord.png?raw=true" width:360px>
 
 ## 5. 단어 검색
 
 <img src = "https://github.com/KoreanTuna/WordMasterProject/blob/main/screenshot/project_searchWord.png?raw=true" width:360px>
+
+## 6. 단어 수정
+
+<img src = "https://github.com/KoreanTuna/WordMasterProject/blob/main/screenshot/project_updateWordproject_updateWord.png?raw=true" width :360px>
+
+## 7. 단어 삭제
+
+<img src = "https://github.com/KoreanTuna/WordMasterProject/blob/main/screenshot/project_deleteWord.png?raw=true" width: 360px>
+
+## 8. 파일 저장
+
+<img src = "https://github.com/KoreanTuna/WordMasterProject/blob/main/screenshot/project_saveFile_2.png?raw=true" width :240px>
+<img src = "https://github.com/KoreanTuna/WordMasterProject/blob/main/screenshot/project_saveFile_1.png?raw=true" width:240px>
+<img src = "https://github.com/KoreanTuna/WordMasterProject/blob/main/screenshot/project_dictinary_file.png?raw=true" width:240px>
 
 ## 0. 프로그램 종료
 
